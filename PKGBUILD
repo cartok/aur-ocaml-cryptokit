@@ -28,7 +28,7 @@ build() {
 
 package() {
     cd cryptokit-"${_srcname}"
-    DESTDIR="$pkgdir" dune install --prefix "/usr" --libdir "lib/ocaml" -p cryptokit
+    DESTDIR="$pkgdir" dune install --prefix "/usr" --libdir "/usr/lib/ocaml" -p cryptokit
     install -dm755 "${pkgdir}/usr/share"
     mv "${pkgdir}/usr/doc" "${pkgdir}/usr/share"
 }
